@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0549B1</color>
+    <color name="colorPrimaryDark">#0133AC</color>
+    <color name="colorAccent">#DA6643</color>
+
+    <color name="colorMainText">#3a494f</color>
+
+    <color name="tableTitleColor1">#F8CB72</color>
+    <color name="tableTitleColor2">#DACB68</color>
+    <color name="tableCellColor1">#D81B60</color>
+    <color name="tableCellColor2">#D81B60</color>
+
+    <color name="colorTableTitleText">#F3C552</color>
+    <color name="colorTableCellText">#8D5301</color>
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+    <data>
+        <import type="android.widget.CompoundButton" />
+        <variable
+            name="region"
+            type="com.jkhrs.jkhrsoi.data.Region" />
+        <variable
+            name="viewmodel"
+            type="com.jkhrs.jkhrsoi.ui.regions.RegionsViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp">
+        <!--<ImageView
+            android:id="@+id/RegionImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@mipmap/ic_launcher" />-->
+
+        <TextView
+            android:id="@+id/RegionName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="2dp"
+            android:text="@{region.regionName}"
+            android:textSize="18sp"
+            android:textColor="@color/colorMainText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            app:layout_constraintTop_toBottomOf="@+id/RegionName">
+            <TableRow >
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="12dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTableTitleText"
+                    android:text="Сальдо тыс.р."/>
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="12dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTableTitleText"
+                    android:text="Начисление тыс.р."/>
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="12dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTableTitleText"
+                    android:text="Оплата тыс.р."/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deptAmount"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTableCellText"
+                    android:text="@{region.saldoAmountText}"/>
+
+                <TextView
+                    android:id="@+id/accrualAmount"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTableCellText"
+                    android:text="@{region.accrualAmountText}"/>
+
+                <TextView
+                    android:id="@+id/paymentAmount"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTableCellText"
+                    android:text="@{region.paymentAmountText}"/>
+            </TableRow>
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

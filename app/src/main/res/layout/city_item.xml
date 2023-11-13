@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+    <data>
+
+        <import type="android.widget.CompoundButton" />
+
+        <variable
+            name="city"
+            type="com.jkhrs.jkhrsoi.data.City" />
+
+        <variable
+            name="viewmodel"
+            type="com.jkhrs.jkhrsoi.ui.cities.CitiesViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:id="@+id/RegionName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="2dp"
+            android:text="@{city.cityName}"
+            android:textSize="18sp"
+            android:textColor="@color/colorMainText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            app:layout_constraintTop_toBottomOf="@+id/RegionName">
+            <TableRow >
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="12dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTableTitleText"
+                    android:text="Сальдо тыс.р."/>
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="12dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTableTitleText"
+                    android:text="Начисление тыс.р."/>
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="12dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTableTitleText"
+                    android:text="Оплата тыс.р."/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/deptAmount"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTableCellText"
+                    android:text="@{city.saldoAmountText}"/>
+
+                <TextView
+                    android:id="@+id/accrualAmount"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTableCellText"
+                    android:text="@{city.accrualAmountText}"/>
+
+                <TextView
+                    android:id="@+id/paymentAmount"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTableCellText"
+                    android:text="@{city.paymentAmountText}"/>
+            </TableRow>
+        </TableLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

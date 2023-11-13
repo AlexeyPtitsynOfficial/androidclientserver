@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">JKHRS OI</string>
+    <string name="title_home">Регионы</string>
+    <string name="title_search">Поиск</string>
+    <string name="title_notifications">Уведомления</string>
+
+    <string name="loading_error">Ошибка при загрузке данных, проверьте подключение.</string>
+</resources>
